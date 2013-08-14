@@ -5,7 +5,7 @@ setup(
     name='mplstyle',
     version='0.1.0',
     description='A simple API for setting matplotlib styles in matplotlib.',
-    long_description=open('README.md').read(),
+    long_description="Documentation at https://github.com/jsvine/mplstyle",
     author='Jeremy Singer-Vine',
     author_email='jsvine@gmail.com',
     url='https://github.com/jsvine/mplstyle',
