@@ -1,3 +1,4 @@
 *.pyc
 mplstyle.egg-info
 dist
+build
