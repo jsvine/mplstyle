@@ -34,5 +34,4 @@ def reset(params=DEFAULT_PARAMS):
 	set(params)
 	new_keys = mpl.rcParams.keys()
 	keys_to_del = list(_set(old_keys) - _set(new_keys))
-	print keys_to_del
 	for key in keys_to_del: del mpl.rcParams[key]
