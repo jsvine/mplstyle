@@ -3,7 +3,7 @@ from setuptools import setup
 
 setup(
     name='mplstyle',
-    version='0.1.0',
+    version='0.1.1',
     description='A simple API for setting matplotlib styles in matplotlib.',
     long_description="Documentation at https://github.com/jsvine/mplstyle",
     author='Jeremy Singer-Vine',
