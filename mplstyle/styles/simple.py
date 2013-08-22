@@ -1,13 +1,17 @@
 import matplotlib as mpl
 import matplotlib.cm
-def style():
-	N_COLORS = 10
-	COLORS = map(mpl.colors.rgb2hex, mpl.cm.Paired([ float(x)/(N_COLORS - 1) for x in range(N_COLORS) ]))
-	DARK_GRAY = "#555555"
-	LIGHT_GRAY = "#EFEFEF"
+
+MAX_COLORS = 8
+DARK_GRAY = "#555555"
+LIGHT_GRAY = "#EFEFEF"
+
+def style(palette=mpl.cm.Set1, n_colors=MAX_COLORS):
+	colors = map(mpl.colors.rgb2hex, palette([
+	    float(x)/(MAX_COLORS) for x in range(MAX_COLORS)
+	]))[:min(MAX_COLORS, n_colors)]
 	return {
 		"axes": {
-			"color_cycle": COLORS,
+			"color_cycle": colors,
 			"facecolor": "white",
 			"edgecolor": DARK_GRAY,
 			"grid": True,
@@ -17,12 +21,14 @@ def style():
 			"axisbelow": True
 		},
 		"patch": {
-			"facecolor": COLORS[0]	
+			"facecolor": colors[0]	
 		},
 		"lines": {
 			"color": "r",
 			"linewidth": 2,
-			"marker": "."
+			"marker": "o",
+            "markersize": 4,
+            "markeredgewidth": 0
 		},
 		"figure": {
 			"facecolor": "white",
