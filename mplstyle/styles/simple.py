@@ -25,7 +25,6 @@ def style(palette=mpl.cm.Set1, n_colors=MAX_COLORS):
         },
         "lines": {
             "color": "r",
-            "linewidth": 2,
             "marker": "o",
             "markersize": 4,
             "markeredgewidth": 0
